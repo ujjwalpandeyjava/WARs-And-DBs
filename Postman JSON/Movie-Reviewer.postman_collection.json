@@ -1,0 +1,895 @@
+{
+	"info": {
+		"_postman_id": "5adef1e1-e9fa-464e-879d-c1408975d55a",
+		"name": "Movie-Reviewer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13685845"
+	},
+	"item": [
+		{
+			"name": "V1",
+			"item": [
+				{
+					"name": "All Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/api/v1/movies/allMovies",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"allMovies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/v1/movies/allMovies",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"allMovies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 08:24:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt3915174\",\n        \"title\": \"Puss in Boots: The Last Wish\",\n        \"releaseDate\": \"2022-12-21\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=tHb7WlgyaUc\",\n        \"genres\": [\n            \"Animation\",\n            \"Action\",\n            \"Adventure\",\n            \"Comedy\",\n            \"Family\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/1NqwE6LP9IEdOZ57NCT51ftHtWT.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/r9PkFnRUIthgBp2JZZzD380MWZy.jpg\",\n            \"https://image.tmdb.org/t/p/original/faXT8V80JRhnArTAeYXz0Eutpv9.jpg\",\n            \"https://image.tmdb.org/t/p/original/pdrlEaknhta2wvE2dcD8XDEbAI4.jpg\",\n            \"https://image.tmdb.org/t/p/original/tGwO4xcBjhXC0p5qlkw37TrH6S6.jpg\",\n            \"https://image.tmdb.org/t/p/original/cP8YNG3XUeBmO8Jk7Skzq3vwHy1.jpg\",\n            \"https://image.tmdb.org/t/p/original/qLE8yuieTDN93WNJRmFSAEJChOg.jpg\",\n            \"https://image.tmdb.org/t/p/original/vNuHqmOJRQXY0PBd887DklSDlBP.jpg\",\n            \"https://image.tmdb.org/t/p/original/uUCc62M0I3lpZy0SiydbBmUIpNi.jpg\",\n            \"https://image.tmdb.org/t/p/original/2wPJIFrBhzzAP8oHDOlShMkERH6.jpg\",\n            \"https://image.tmdb.org/t/p/original/fnfirCEDIkxZnQEtEMMSgllm0KZ.jpg\"\n        ],\n        \"reviewIds\": []\n    },\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt1630029\",\n        \"title\": \"Avatar: The Way of Water\",\n        \"releaseDate\": \"2022-12-16\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=d9MyW72ELq0\",\n        \"genres\": [\n            \"Science Fiction\",\n            \"Action\",\n            \"Adventure\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/s16H6tpK2utvwDtzZ8Qy4qm5Emw.jpg\",\n            \"https://image.tmdb.org/t/p/original/evaFLqtswezLosllRZtJNMiO1UR.jpg\",\n            \"https://image.tmdb.org/t/p/original/198vrF8k7mfQ4FjDJsBmdQcaiyq.jpg\",\n            \"https://image.tmdb.org/t/p/original/zaapQ1zjKe2BGhhowh5pM251Gpl.jpg\",\n            \"https://image.tmdb.org/t/p/original/tQ91wWQJ2WRNDXwxuO7GCXX5VPC.jpg\",\n            \"https://image.tmdb.org/t/p/original/5gPQKfFJnl8d1edbkOzKONo4mnr.jpg\",\n            \"https://image.tmdb.org/t/p/original/2fS9cpar9rzxixwnRptg4bGmIym.jpg\",\n            \"https://image.tmdb.org/t/p/original/fkGR1ltNbvERk3topo4dP3gWsvR.jpg\",\n            \"https://image.tmdb.org/t/p/original/rb9IHprKNoSKqatP2vr25unUDSu.jpg\",\n            \"https://image.tmdb.org/t/p/original/37ZswIuRQcRBN7kHij5MBjzRMRt.jpg\"\n        ],\n        \"reviewIds\": []\n    },\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt8760708\",\n        \"title\": \"M3GAN\",\n        \"releaseDate\": \"2023-01-06\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=BRb4U99OU80\",\n        \"genres\": [\n            \"Science Fiction\",\n            \"Horror\",\n            \"Comedy\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/xBl5AGw7HXZcv1nNXPlzGgO4Cfo.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/5kAGbi9MFAobQTVfK4kWPnIfnP0.jpg\",\n            \"https://image.tmdb.org/t/p/original/dlxzUj7z1MqEcFiwvvrj0bvBKDY.jpg\",\n            \"https://image.tmdb.org/t/p/original/q2fY4kMXKoGv4CQf310MCxpXlRI.jpg\",\n            \"https://image.tmdb.org/t/p/original/pTxwFdsdDWzpCRYuk1QbggdaOlL.jpg\",\n            \"https://image.tmdb.org/t/p/original/1zuz2RgFoOjulkjjNHHFc3WiHGB.jpg\",\n            \"https://image.tmdb.org/t/p/original/7HqxI1IXMloT9VTSuDC8ikaj810.jpg\",\n            \"https://image.tmdb.org/t/p/original/vpK2rp3J5LiC01HoNM0j9DEHQ1T.jpg\",\n            \"https://image.tmdb.org/t/p/original/cNHXdmr4amP6EPCMa0dqD8rwzDV.jpg\",\n            \"https://image.tmdb.org/t/p/original/txQLFd6rfQrskQhFENkS1jElptt.jpg\",\n            \"https://image.tmdb.org/t/p/original/dC4tj1ONdlZ2TWv4XD2SA1KUnJN.jpg\"\n        ],\n        \"reviewIds\": []\n    },\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt11116912\",\n        \"title\": \"Troll\",\n        \"releaseDate\": \"2022-12-01\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=AiohkY_XQYQ\",\n        \"genres\": [\n            \"Fantasy\",\n            \"Action\",\n            \"Adventure\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/9z4jRr43JdtU66P0iy8h18OyLql.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/53BC9F2tpZnsGno2cLhzvGprDYS.jpg\",\n            \"https://image.tmdb.org/t/p/original/e9Qb2kmBnMXHCmNMI8NX1JbWhh1.jpg\",\n            \"https://image.tmdb.org/t/p/original/2WjOOOGUu6dp4r8VqR5n48DY7JG.jpg\",\n            \"https://image.tmdb.org/t/p/original/duIsyybgrC4S8kcCIVaxNOttV15.jpg\",\n            \"https://image.tmdb.org/t/p/original/3RS8runn9AfrYDzRVPWuGPmvXQf.jpg\",\n            \"https://image.tmdb.org/t/p/original/8wLRn2VvBlCu6cqYS4ypipnwosr.jpg\",\n            \"https://image.tmdb.org/t/p/original/zDqVVkmfvj47FBUE5lwE4rWnITu.jpg\",\n            \"https://image.tmdb.org/t/p/original/682Ui5DwZDdbIPzKAEOR7cJlMXa.jpg\",\n            \"https://image.tmdb.org/t/p/original/6jdlppcnGi3XuJamfs4Vl7HyxB.jpg\",\n            \"https://image.tmdb.org/t/p/original/uIq83ogs7QBEWi1aqmUrdDIH61m.jpg\"\n        ],\n        \"reviewIds\": []\n    },\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt6443346\",\n        \"title\": \"Black Adam\",\n        \"releaseDate\": \"2022-10-19\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=JaV7mmc9HGw\",\n        \"genres\": [\n            \"Fantasy\",\n            \"Action\",\n            \"Science Fiction\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg\",\n            \"https://image.tmdb.org/t/p/original/9hNtTwY8P5v2MKnUeb7iuREI7Yb.jpg\",\n            \"https://image.tmdb.org/t/p/original/zplntIhzXyBiXFYWReETxh0uyFF.jpg\",\n            \"https://image.tmdb.org/t/p/original/yxkhM18dYwsRRffLnd9lz2d4i0v.jpg\",\n            \"https://image.tmdb.org/t/p/original/bgaBKREAfUtZgvd6zoV6RQRcIUt.jpg\",\n            \"https://image.tmdb.org/t/p/original/uqYxoj4hqwocwfBs2xxGyQT88Yk.jpg\",\n            \"https://image.tmdb.org/t/p/original/qBx97wytqlyPqXATHqRgIVFxJRU.jpg\",\n            \"https://image.tmdb.org/t/p/original/d6MhreFdMHONqX3iZlJGCF8UkIt.jpg\",\n            \"https://image.tmdb.org/t/p/original/9inNotReApz0n50WvWbrt0n1cbL.jpg\",\n            \"https://image.tmdb.org/t/p/original/pSOuqtJmdh7aI1yiK7M8e0PmbPC.jpg\"\n        ],\n        \"reviewIds\": []\n    },\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt0499549\",\n        \"title\": \"Avatar\",\n        \"releaseDate\": \"2009-12-15\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=5PSNL1qE6VY\",\n        \"genres\": [\n            \"Fantasy\",\n            \"Action\",\n            \"Science Fiction\",\n            \"Adventure\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/o0s4XsEDfDlvit5pDRKjzXR4pp2.jpg\",\n            \"https://image.tmdb.org/t/p/original/8I37NtDffNV7AZlDa7uDvvqhovU.jpg\",\n            \"https://image.tmdb.org/t/p/original/2YLOjUiczXEgVZFDSIeH3iWB3Ub.jpg\",\n            \"https://image.tmdb.org/t/p/original/Yc9q6QuWrMp9nuDm5R8ExNqbEq.jpg\",\n            \"https://image.tmdb.org/t/p/original/jlQJDD0L5ZojjlS0KYnApdO0n19.jpg\",\n            \"https://image.tmdb.org/t/p/original/sfw4m2tOgQRzhF6VXxaXGfd1vX.jpg\",\n            \"https://image.tmdb.org/t/p/original/7ABsaBkO1jA2psC8Hy4IDhkID4h.jpg\",\n            \"https://image.tmdb.org/t/p/original/xMMrBziwJqrgjerqpNeQvwuwiUp.jpg\",\n            \"https://image.tmdb.org/t/p/original/chauy3iJaZtrMbTr72rgNmOZwo3.jpg\",\n            \"https://image.tmdb.org/t/p/original/mYJkJ7YxJsUNI1nAOOUOpRN2auC.jpg\"\n        ],\n        \"reviewIds\": []\n    },\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt3447590\",\n        \"title\": \"Roald Dahl's Matilda the Musical\",\n        \"releaseDate\": \"2022-11-25\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=lroAhsDr2vI\",\n        \"genres\": [\n            \"Fantasy\",\n            \"Family\",\n            \"Comedy\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/ga8R3OiOMMgSvZ4cOj8x7prUNYZ.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/nWs0auTqn2UaFGfTKtUE5tlTeBu.jpg\",\n            \"https://image.tmdb.org/t/p/original/bPftMelR4N3jUg2LTlEblFz0gWk.jpg\",\n            \"https://image.tmdb.org/t/p/original/u2MLMkGEjJGQDs17Vmoej1RYFph.jpg\",\n            \"https://image.tmdb.org/t/p/original/jG52tsazn04F1fe8hPZfVv7ICKt.jpg\",\n            \"https://image.tmdb.org/t/p/original/4INEI7t7Vcg0cFvze7UIgwYCeSG.jpg\",\n            \"https://image.tmdb.org/t/p/original/krAu6znzW8c54NdJPneNi4bem1l.jpg\",\n            \"https://image.tmdb.org/t/p/original/6TUMppDMrYA4gzoaDUbbSnZFlxW.jpg\",\n            \"https://image.tmdb.org/t/p/original/hacV1h1SWrPlrerF3xpetvEdqT.jpg\",\n            \"https://image.tmdb.org/t/p/original/7iXsB1r9IK17ZFShqoxcHKQ7dLp.jpg\",\n            \"https://image.tmdb.org/t/p/original/dwiRYDLcFyDOkgkSc1JFtTr6Kdk.jpg\"\n        ],\n        \"reviewIds\": []\n    },\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt9114286\",\n        \"title\": \"Black Panther: Wakanda Forever\",\n        \"releaseDate\": \"2022-11-11\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=_Z3QKkl1WyM\",\n        \"genres\": [\n            \"Action\",\n            \"Adventure\",\n            \"Science Fiction\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/cryEN3sWlgB2wTzcUNVtDGI8bkM.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg\",\n            \"https://image.tmdb.org/t/p/original/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg\",\n            \"https://image.tmdb.org/t/p/original/cs3LpA38BS2XDPfUzdgMB537XOo.jpg\",\n            \"https://image.tmdb.org/t/p/original/6SGMzCsaU094Mt32IHGkIYtIl06.jpg\",\n            \"https://image.tmdb.org/t/p/original/bty0TwJGsxMqYRptgyzn28Cxq5y.jpg\",\n            \"https://image.tmdb.org/t/p/original/h2jp3CSdTPc22mUqps9I8vXDPaN.jpg\",\n            \"https://image.tmdb.org/t/p/original/fSfWloWi5rmqbmC7GhO0HY2TMZW.jpg\",\n            \"https://image.tmdb.org/t/p/original/vZujZnmkYB5nGUC5d5llK9DbGLk.jpg\",\n            \"https://image.tmdb.org/t/p/original/8sMmAmN2x7mBiNKEX2o0aOTozEB.jpg\",\n            \"https://image.tmdb.org/t/p/original/geI3Mk7nehX1kvyIY3K5ajaiNfI.jpg\"\n        ],\n        \"reviewIds\": []\n    },\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt10298840\",\n        \"title\": \"Strange World\",\n        \"releaseDate\": \"2022-11-23\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=bKh2G73gCCs\",\n        \"genres\": [\n            \"Family\",\n            \"Adventure\",\n            \"Science Fiction\",\n            \"Animation\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/kgJ8bX3zDQDM2Idkleis28XSVnu.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/5wDBVictj4wUYZ31gR5WzCM9dLD.jpg\",\n            \"https://image.tmdb.org/t/p/original/zNIlXd7CAz0hHAInbs2nsFRc0xQ.jpg\",\n            \"https://image.tmdb.org/t/p/original/1rukJHAP5p6DNHe75Oo1D0m3SnR.jpg\",\n            \"https://image.tmdb.org/t/p/original/aKbe411WyjTZy1OZUVIdNDYVf21.jpg\",\n            \"https://image.tmdb.org/t/p/original/9RKvxz0IryD2ofLYyGpnE7HeWlR.jpg\",\n            \"https://image.tmdb.org/t/p/original/kFURsDklj7QGMMkGJVwDBaJJn05.jpg\",\n            \"https://image.tmdb.org/t/p/original/v6oBDkd7ogXzTQxIU0H5SXq0hOL.jpg\",\n            \"https://image.tmdb.org/t/p/original/fBshLiEJcjdfrU3qQBIINcePSsm.jpg\",\n            \"https://image.tmdb.org/t/p/original/3oie0kID8SNCjkqN6Raweg5dJa.jpg\",\n            \"https://image.tmdb.org/t/p/original/zgFldVKON1Nxp8ui7HVABGKDQKM.jpg\"\n        ],\n        \"reviewIds\": []\n    },\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt8093700\",\n        \"title\": \"The Woman King\",\n        \"releaseDate\": \"2022-09-15\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=3RDaPV_rJ1Y\",\n        \"genres\": [\n            \"Action\",\n            \"Drama\",\n            \"History\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/5O1GLla5vNuegqNxNhKL1OKE1lO.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/gkseI3CUfQtMKX41XD4AxDzhQb7.jpg\",\n            \"https://image.tmdb.org/t/p/original/wSILunFEbvw00Ql2aaMHCSZf3cI.jpg\",\n            \"https://image.tmdb.org/t/p/original/xTsERrOCW15OIYl5aPX7Jbj38wu.jpg\",\n            \"https://image.tmdb.org/t/p/original/j06sSrtbqnZdSgG6yEduao95y48.jpg\",\n            \"https://image.tmdb.org/t/p/original/v4YV4ne1nwNni35iz4WmpZRZpCD.jpg\",\n            \"https://image.tmdb.org/t/p/original/6n5ln1vWGD3JyT6Ibt7ZxjSxY3v.jpg\",\n            \"https://image.tmdb.org/t/p/original/gi47WUUYVQWaLE5mJraS87ycdy6.jpg\",\n            \"https://image.tmdb.org/t/p/original/dTQOU5a32K3UPTIXHgipEqN41OM.jpg\",\n            \"https://image.tmdb.org/t/p/original/7zQJYV02yehWrQN6NjKsBorqUUS.jpg\",\n            \"https://image.tmdb.org/t/p/original/rdDL4y7BxGyXFEDJgAG4lz89bG2.jpg\"\n        ],\n        \"reviewIds\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "getX-SkipY-Movies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": 2,\r\n    \"next\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/api/v1/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success-NoMovie",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"page\": 2,\r\n    \"next\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/api/v1/movies",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Aug 2023 18:21:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movies\": [],\n    \"pages\": 2,\n    \"moviesCount\": 0\n}"
+						},
+						{
+							"name": "Success-GotMovies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"page\": 2,\r\n    \"next\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/api/v1/movies",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Aug 2023 18:21:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movies\": [\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt8760708\",\n            \"title\": \"M3GAN\",\n            \"releaseDate\": \"2023-01-06\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=BRb4U99OU80\",\n            \"genres\": [\n                \"Science Fiction\",\n                \"Horror\",\n                \"Comedy\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/xBl5AGw7HXZcv1nNXPlzGgO4Cfo.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/5kAGbi9MFAobQTVfK4kWPnIfnP0.jpg\",\n                \"https://image.tmdb.org/t/p/original/dlxzUj7z1MqEcFiwvvrj0bvBKDY.jpg\",\n                \"https://image.tmdb.org/t/p/original/q2fY4kMXKoGv4CQf310MCxpXlRI.jpg\",\n                \"https://image.tmdb.org/t/p/original/pTxwFdsdDWzpCRYuk1QbggdaOlL.jpg\",\n                \"https://image.tmdb.org/t/p/original/1zuz2RgFoOjulkjjNHHFc3WiHGB.jpg\",\n                \"https://image.tmdb.org/t/p/original/7HqxI1IXMloT9VTSuDC8ikaj810.jpg\",\n                \"https://image.tmdb.org/t/p/original/vpK2rp3J5LiC01HoNM0j9DEHQ1T.jpg\",\n                \"https://image.tmdb.org/t/p/original/cNHXdmr4amP6EPCMa0dqD8rwzDV.jpg\",\n                \"https://image.tmdb.org/t/p/original/txQLFd6rfQrskQhFENkS1jElptt.jpg\",\n                \"https://image.tmdb.org/t/p/original/dC4tj1ONdlZ2TWv4XD2SA1KUnJN.jpg\"\n            ],\n            \"reviewIds\": []\n        },\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt11116912\",\n            \"title\": \"Troll\",\n            \"releaseDate\": \"2022-12-01\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=AiohkY_XQYQ\",\n            \"genres\": [\n                \"Fantasy\",\n                \"Action\",\n                \"Adventure\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/9z4jRr43JdtU66P0iy8h18OyLql.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/53BC9F2tpZnsGno2cLhzvGprDYS.jpg\",\n                \"https://image.tmdb.org/t/p/original/e9Qb2kmBnMXHCmNMI8NX1JbWhh1.jpg\",\n                \"https://image.tmdb.org/t/p/original/2WjOOOGUu6dp4r8VqR5n48DY7JG.jpg\",\n                \"https://image.tmdb.org/t/p/original/duIsyybgrC4S8kcCIVaxNOttV15.jpg\",\n                \"https://image.tmdb.org/t/p/original/3RS8runn9AfrYDzRVPWuGPmvXQf.jpg\",\n                \"https://image.tmdb.org/t/p/original/8wLRn2VvBlCu6cqYS4ypipnwosr.jpg\",\n                \"https://image.tmdb.org/t/p/original/zDqVVkmfvj47FBUE5lwE4rWnITu.jpg\",\n                \"https://image.tmdb.org/t/p/original/682Ui5DwZDdbIPzKAEOR7cJlMXa.jpg\",\n                \"https://image.tmdb.org/t/p/original/6jdlppcnGi3XuJamfs4Vl7HyxB.jpg\",\n                \"https://image.tmdb.org/t/p/original/uIq83ogs7QBEWi1aqmUrdDIH61m.jpg\"\n            ],\n            \"reviewIds\": [\n                {\n                    \"id\": {\n                        \"timestamp\": 1691650766,\n                        \"date\": \"2023-08-10T06:59:26.000+00:00\"\n                    },\n                    \"body\": \"Not so nice movie\",\n                    \"isDeleted\": false\n                }\n            ]\n        },\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt9114286\",\n            \"title\": \"Black Panther: Wakanda Forever\",\n            \"releaseDate\": \"2022-11-11\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=_Z3QKkl1WyM\",\n            \"genres\": [\n                \"Action\",\n                \"Adventure\",\n                \"Science Fiction\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/cryEN3sWlgB2wTzcUNVtDGI8bkM.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg\",\n                \"https://image.tmdb.org/t/p/original/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg\",\n                \"https://image.tmdb.org/t/p/original/cs3LpA38BS2XDPfUzdgMB537XOo.jpg\",\n                \"https://image.tmdb.org/t/p/original/6SGMzCsaU094Mt32IHGkIYtIl06.jpg\",\n                \"https://image.tmdb.org/t/p/original/bty0TwJGsxMqYRptgyzn28Cxq5y.jpg\",\n                \"https://image.tmdb.org/t/p/original/h2jp3CSdTPc22mUqps9I8vXDPaN.jpg\",\n                \"https://image.tmdb.org/t/p/original/fSfWloWi5rmqbmC7GhO0HY2TMZW.jpg\",\n                \"https://image.tmdb.org/t/p/original/vZujZnmkYB5nGUC5d5llK9DbGLk.jpg\",\n                \"https://image.tmdb.org/t/p/original/8sMmAmN2x7mBiNKEX2o0aOTozEB.jpg\",\n                \"https://image.tmdb.org/t/p/original/geI3Mk7nehX1kvyIY3K5ajaiNfI.jpg\"\n            ],\n            \"reviewIds\": []\n        }\n    ],\n    \"pages\": 4,\n    \"moviesCount\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "One Movie with - ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/api/v1/movies/movieId?movieId=64b5088a7a305099af9a5276",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"movieId"
+							],
+							"query": [
+								{
+									"key": "movieId",
+									"value": "64b5088a7a305099af9a5276"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/v1/movies/:movieId",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										":movieId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "64b5088a7a305099af9a5275"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 08:12:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": {\n        \"timestamp\": 1689585802,\n        \"date\": \"2023-07-17T09:23:22.000+00:00\"\n    },\n    \"imdbId\": \"tt1630029\",\n    \"title\": \"Avatar: The Way of Water\",\n    \"releaseDate\": \"2022-12-16\",\n    \"trailerLink\": \"https://www.youtube.com/watch?v=d9MyW72ELq0\",\n    \"genres\": [\n        \"Science Fiction\",\n        \"Action\",\n        \"Adventure\"\n    ],\n    \"poster\": \"https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg\",\n    \"backdrops\": [\n        \"https://image.tmdb.org/t/p/original/s16H6tpK2utvwDtzZ8Qy4qm5Emw.jpg\",\n        \"https://image.tmdb.org/t/p/original/evaFLqtswezLosllRZtJNMiO1UR.jpg\",\n        \"https://image.tmdb.org/t/p/original/198vrF8k7mfQ4FjDJsBmdQcaiyq.jpg\",\n        \"https://image.tmdb.org/t/p/original/zaapQ1zjKe2BGhhowh5pM251Gpl.jpg\",\n        \"https://image.tmdb.org/t/p/original/tQ91wWQJ2WRNDXwxuO7GCXX5VPC.jpg\",\n        \"https://image.tmdb.org/t/p/original/5gPQKfFJnl8d1edbkOzKONo4mnr.jpg\",\n        \"https://image.tmdb.org/t/p/original/2fS9cpar9rzxixwnRptg4bGmIym.jpg\",\n        \"https://image.tmdb.org/t/p/original/fkGR1ltNbvERk3topo4dP3gWsvR.jpg\",\n        \"https://image.tmdb.org/t/p/original/rb9IHprKNoSKqatP2vr25unUDSu.jpg\",\n        \"https://image.tmdb.org/t/p/original/37ZswIuRQcRBN7kHij5MBjzRMRt.jpg\"\n    ],\n    \"reviewIds\": []\n}"
+						},
+						{
+							"name": "Not-Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/v1/movies/:movieId",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										":movieId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "64b5088a7a305099af9a5271"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 08:13:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "null"
+						},
+						{
+							"name": "IdNotHexaString",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/v1/movies/:movieId",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										":movieId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "64b5088a7a305099a9a5271"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 08:23:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-07-21T08:23:27.864+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.bson.types.ObjectId'; Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable org.bson.types.ObjectId] for value [64b5088a7a305099a9a5271]\\r\\n\\tat org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)\\r\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)\\r\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\r\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\r\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\r\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\r\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\r\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)\\r\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\\r\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)\\r\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\\r\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\\r\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\\r\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)\\r\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)\\r\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\\r\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)\\r\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\\r\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\r\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\r\\n\\tat java.base/java.lang.Thread.run(Thread.java:833)\\r\\nCaused by: org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable org.bson.types.ObjectId] for value [64b5088a7a305099a9a5271]\\r\\n\\tat org.springframework.core.convert.support.ObjectToObjectConverter.convert(ObjectToObjectConverter.java:117)\\r\\n\\tat org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:41)\\r\\n\\tat org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:192)\\r\\n\\tat org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:129)\\r\\n\\tat org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)\\r\\n\\tat org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)\\r\\n\\tat org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:729)\\r\\n\\tat org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)\\r\\n\\t... 47 more\\r\\nCaused by: java.lang.IllegalArgumentException: state should be: hexString has 24 characters\\r\\n\\tat org.bson.assertions.Assertions.isTrueArgument(Assertions.java:64)\\r\\n\\tat org.bson.types.ObjectId.parseHexString(ObjectId.java:419)\\r\\n\\tat org.bson.types.ObjectId.<init>(ObjectId.java:205)\\r\\n\\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\\r\\n\\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\\r\\n\\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\\r\\n\\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\\r\\n\\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\\r\\n\\tat org.springframework.core.convert.support.ObjectToObjectConverter.convert(ObjectToObjectConverter.java:113)\\r\\n\\t... 54 more\\r\\n\",\n    \"message\": \"Failed to convert value of type 'java.lang.String' to required type 'org.bson.types.ObjectId'; Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable org.bson.types.ObjectId] for value [64b5088a7a305099a9a5271]\",\n    \"path\": \"/api/v1/movies/64b5088a7a305099a9a5271\"\n}"
+						}
+					]
+				},
+				{
+					"name": "One Movie with - IMDB ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/api/v1/movies/imdbID?imdbID=tt3915174",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"imdbID"
+							],
+							"query": [
+								{
+									"key": "imdbID",
+									"value": "tt3915174"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not-Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/v1/movies/imdbID?imdbID=tt8760708f",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"imdbID"
+									],
+									"query": [
+										{
+											"key": "imdbID",
+											"value": "tt8760708f"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 09:16:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "null"
+						},
+						{
+							"name": "One Movie with - IMDB ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/v1/movies/imdbID?imdbID=tt8760708",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"imdbID"
+									],
+									"query": [
+										{
+											"key": "imdbID",
+											"value": "tt8760708"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 09:16:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": {\n        \"timestamp\": 1689585802,\n        \"date\": \"2023-07-17T09:23:22.000+00:00\"\n    },\n    \"imdbId\": \"tt8760708\",\n    \"title\": \"M3GAN\",\n    \"releaseDate\": \"2023-01-06\",\n    \"trailerLink\": \"https://www.youtube.com/watch?v=BRb4U99OU80\",\n    \"genres\": [\n        \"Science Fiction\",\n        \"Horror\",\n        \"Comedy\"\n    ],\n    \"poster\": \"https://image.tmdb.org/t/p/w500/xBl5AGw7HXZcv1nNXPlzGgO4Cfo.jpg\",\n    \"backdrops\": [\n        \"https://image.tmdb.org/t/p/original/5kAGbi9MFAobQTVfK4kWPnIfnP0.jpg\",\n        \"https://image.tmdb.org/t/p/original/dlxzUj7z1MqEcFiwvvrj0bvBKDY.jpg\",\n        \"https://image.tmdb.org/t/p/original/q2fY4kMXKoGv4CQf310MCxpXlRI.jpg\",\n        \"https://image.tmdb.org/t/p/original/pTxwFdsdDWzpCRYuk1QbggdaOlL.jpg\",\n        \"https://image.tmdb.org/t/p/original/1zuz2RgFoOjulkjjNHHFc3WiHGB.jpg\",\n        \"https://image.tmdb.org/t/p/original/7HqxI1IXMloT9VTSuDC8ikaj810.jpg\",\n        \"https://image.tmdb.org/t/p/original/vpK2rp3J5LiC01HoNM0j9DEHQ1T.jpg\",\n        \"https://image.tmdb.org/t/p/original/cNHXdmr4amP6EPCMa0dqD8rwzDV.jpg\",\n        \"https://image.tmdb.org/t/p/original/txQLFd6rfQrskQhFENkS1jElptt.jpg\",\n        \"https://image.tmdb.org/t/p/original/dC4tj1ONdlZ2TWv4XD2SA1KUnJN.jpg\"\n    ],\n    \"reviewIds\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Movies name containing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/api/v1/movies/nameContaining?nameContaining=mo",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"nameContaining"
+							],
+							"query": [
+								{
+									"key": "nameContaining",
+									"value": "mo"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/v1/movies/nameContaining?nameContaining=water",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"nameContaining"
+									],
+									"query": [
+										{
+											"key": "nameContaining",
+											"value": "water"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jul 2023 07:05:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": {\n            \"timestamp\": 1689585802,\n            \"date\": \"2023-07-17T09:23:22.000+00:00\"\n        },\n        \"imdbId\": \"tt1630029\",\n        \"title\": \"Avatar: The Way of Water\",\n        \"releaseDate\": \"2022-12-16\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=d9MyW72ELq0\",\n        \"genres\": [\n            \"Science Fiction\",\n            \"Action\",\n            \"Adventure\"\n        ],\n        \"poster\": \"https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg\",\n        \"backdrops\": [\n            \"https://image.tmdb.org/t/p/original/s16H6tpK2utvwDtzZ8Qy4qm5Emw.jpg\",\n            \"https://image.tmdb.org/t/p/original/evaFLqtswezLosllRZtJNMiO1UR.jpg\",\n            \"https://image.tmdb.org/t/p/original/198vrF8k7mfQ4FjDJsBmdQcaiyq.jpg\",\n            \"https://image.tmdb.org/t/p/original/zaapQ1zjKe2BGhhowh5pM251Gpl.jpg\",\n            \"https://image.tmdb.org/t/p/original/tQ91wWQJ2WRNDXwxuO7GCXX5VPC.jpg\",\n            \"https://image.tmdb.org/t/p/original/5gPQKfFJnl8d1edbkOzKONo4mnr.jpg\",\n            \"https://image.tmdb.org/t/p/original/2fS9cpar9rzxixwnRptg4bGmIym.jpg\",\n            \"https://image.tmdb.org/t/p/original/fkGR1ltNbvERk3topo4dP3gWsvR.jpg\",\n            \"https://image.tmdb.org/t/p/original/rb9IHprKNoSKqatP2vr25unUDSu.jpg\",\n            \"https://image.tmdb.org/t/p/original/37ZswIuRQcRBN7kHij5MBjzRMRt.jpg\"\n        ],\n        \"reviewIds\": []\n    }\n]"
+						},
+						{
+							"name": "Nothing In List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/v1/movies/nameContaining?nameContaining=motu",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"nameContaining"
+									],
+									"query": [
+										{
+											"key": "nameContaining",
+											"value": "motu"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jul 2023 07:05:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Add Movie Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reviewBody\": \"Puss In boot is amazing.\",\r\n    \"imdbId\": \"tt3915174\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/api/v1/reviews",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"reviews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reviewBody\": \"review One\",\r\n    \"imdbId\": \"tt3915174\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/api/v1/reviews",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"reviews"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jul 2023 09:39:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": {\n        \"timestamp\": 1690191569,\n        \"date\": \"2023-07-24T09:39:29.000+00:00\"\n    },\n    \"body\": \"review One\"\n}"
+						},
+						{
+							"name": "Incorrect message Name",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reviewBody1\": \"Love movie with my GF.\",\r\n    \"imdbId\": \"tt3915174\"\r\n}\r\n\r\n// Response is in status code.",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/api/v1/reviews",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"reviews"
+									]
+								}
+							},
+							"status": "Not Modified",
+							"code": 304,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jul 2023 09:50:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "One Movie Reviews only",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/api/v1/movies/:imdbID/review",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								":imdbID",
+								"review"
+							],
+							"variable": [
+								{
+									"key": "imdbID",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home/Master-URL1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084",
+					"host": [
+						"localhost"
+					],
+					"port": "8084"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Home/Master-URL2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
