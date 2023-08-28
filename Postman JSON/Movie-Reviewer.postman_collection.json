@@ -10,6 +10,26 @@
 			"name": "V1",
 			"item": [
 				{
+					"name": "Movies home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/api/v1/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "All Movies",
 					"request": {
 						"method": "GET",
@@ -79,7 +99,7 @@
 					]
 				},
 				{
-					"name": "getX-SkipY-Movies",
+					"name": "Latest -getX-SkipY-Movies",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -88,7 +108,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"page\": 2,\r\n    \"next\": 3\r\n}",
+							"raw": "{\r\n   \"next\": \"3\",\r\n   \"page\": \"2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -96,15 +116,24 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8084/api/v1/movies",
+							"raw": "{{baseUrl}}/api/v1/movies?page=1&next=5",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "8084",
 							"path": [
 								"api",
 								"v1",
 								"movies"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "next",
+									"value": "5"
+								}
 							]
 						}
 					},
@@ -174,7 +203,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"movies\": [],\n    \"pages\": 2,\n    \"moviesCount\": 0\n}"
+							"body": "{\n    \"movies\": [],\n    \"possiblePages\": 2,\n    \"moviesCount\": 0\n}"
 						},
 						{
 							"name": "Success-GotMovies",
@@ -241,7 +270,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"movies\": [\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt8760708\",\n            \"title\": \"M3GAN\",\n            \"releaseDate\": \"2023-01-06\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=BRb4U99OU80\",\n            \"genres\": [\n                \"Science Fiction\",\n                \"Horror\",\n                \"Comedy\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/xBl5AGw7HXZcv1nNXPlzGgO4Cfo.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/5kAGbi9MFAobQTVfK4kWPnIfnP0.jpg\",\n                \"https://image.tmdb.org/t/p/original/dlxzUj7z1MqEcFiwvvrj0bvBKDY.jpg\",\n                \"https://image.tmdb.org/t/p/original/q2fY4kMXKoGv4CQf310MCxpXlRI.jpg\",\n                \"https://image.tmdb.org/t/p/original/pTxwFdsdDWzpCRYuk1QbggdaOlL.jpg\",\n                \"https://image.tmdb.org/t/p/original/1zuz2RgFoOjulkjjNHHFc3WiHGB.jpg\",\n                \"https://image.tmdb.org/t/p/original/7HqxI1IXMloT9VTSuDC8ikaj810.jpg\",\n                \"https://image.tmdb.org/t/p/original/vpK2rp3J5LiC01HoNM0j9DEHQ1T.jpg\",\n                \"https://image.tmdb.org/t/p/original/cNHXdmr4amP6EPCMa0dqD8rwzDV.jpg\",\n                \"https://image.tmdb.org/t/p/original/txQLFd6rfQrskQhFENkS1jElptt.jpg\",\n                \"https://image.tmdb.org/t/p/original/dC4tj1ONdlZ2TWv4XD2SA1KUnJN.jpg\"\n            ],\n            \"reviewIds\": []\n        },\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt11116912\",\n            \"title\": \"Troll\",\n            \"releaseDate\": \"2022-12-01\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=AiohkY_XQYQ\",\n            \"genres\": [\n                \"Fantasy\",\n                \"Action\",\n                \"Adventure\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/9z4jRr43JdtU66P0iy8h18OyLql.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/53BC9F2tpZnsGno2cLhzvGprDYS.jpg\",\n                \"https://image.tmdb.org/t/p/original/e9Qb2kmBnMXHCmNMI8NX1JbWhh1.jpg\",\n                \"https://image.tmdb.org/t/p/original/2WjOOOGUu6dp4r8VqR5n48DY7JG.jpg\",\n                \"https://image.tmdb.org/t/p/original/duIsyybgrC4S8kcCIVaxNOttV15.jpg\",\n                \"https://image.tmdb.org/t/p/original/3RS8runn9AfrYDzRVPWuGPmvXQf.jpg\",\n                \"https://image.tmdb.org/t/p/original/8wLRn2VvBlCu6cqYS4ypipnwosr.jpg\",\n                \"https://image.tmdb.org/t/p/original/zDqVVkmfvj47FBUE5lwE4rWnITu.jpg\",\n                \"https://image.tmdb.org/t/p/original/682Ui5DwZDdbIPzKAEOR7cJlMXa.jpg\",\n                \"https://image.tmdb.org/t/p/original/6jdlppcnGi3XuJamfs4Vl7HyxB.jpg\",\n                \"https://image.tmdb.org/t/p/original/uIq83ogs7QBEWi1aqmUrdDIH61m.jpg\"\n            ],\n            \"reviewIds\": [\n                {\n                    \"id\": {\n                        \"timestamp\": 1691650766,\n                        \"date\": \"2023-08-10T06:59:26.000+00:00\"\n                    },\n                    \"body\": \"Not so nice movie\",\n                    \"isDeleted\": false\n                }\n            ]\n        },\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt9114286\",\n            \"title\": \"Black Panther: Wakanda Forever\",\n            \"releaseDate\": \"2022-11-11\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=_Z3QKkl1WyM\",\n            \"genres\": [\n                \"Action\",\n                \"Adventure\",\n                \"Science Fiction\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/cryEN3sWlgB2wTzcUNVtDGI8bkM.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg\",\n                \"https://image.tmdb.org/t/p/original/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg\",\n                \"https://image.tmdb.org/t/p/original/cs3LpA38BS2XDPfUzdgMB537XOo.jpg\",\n                \"https://image.tmdb.org/t/p/original/6SGMzCsaU094Mt32IHGkIYtIl06.jpg\",\n                \"https://image.tmdb.org/t/p/original/bty0TwJGsxMqYRptgyzn28Cxq5y.jpg\",\n                \"https://image.tmdb.org/t/p/original/h2jp3CSdTPc22mUqps9I8vXDPaN.jpg\",\n                \"https://image.tmdb.org/t/p/original/fSfWloWi5rmqbmC7GhO0HY2TMZW.jpg\",\n                \"https://image.tmdb.org/t/p/original/vZujZnmkYB5nGUC5d5llK9DbGLk.jpg\",\n                \"https://image.tmdb.org/t/p/original/8sMmAmN2x7mBiNKEX2o0aOTozEB.jpg\",\n                \"https://image.tmdb.org/t/p/original/geI3Mk7nehX1kvyIY3K5ajaiNfI.jpg\"\n            ],\n            \"reviewIds\": []\n        }\n    ],\n    \"pages\": 4,\n    \"moviesCount\": 3\n}"
+							"body": "{\n    \"movies\": [\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt8760708\",\n            \"title\": \"M3GAN\",\n            \"releaseDate\": \"2023-01-06\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=BRb4U99OU80\",\n            \"genres\": [\n                \"Science Fiction\",\n                \"Horror\",\n                \"Comedy\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/xBl5AGw7HXZcv1nNXPlzGgO4Cfo.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/5kAGbi9MFAobQTVfK4kWPnIfnP0.jpg\",\n                \"https://image.tmdb.org/t/p/original/dlxzUj7z1MqEcFiwvvrj0bvBKDY.jpg\",\n                \"https://image.tmdb.org/t/p/original/q2fY4kMXKoGv4CQf310MCxpXlRI.jpg\",\n                \"https://image.tmdb.org/t/p/original/pTxwFdsdDWzpCRYuk1QbggdaOlL.jpg\",\n                \"https://image.tmdb.org/t/p/original/1zuz2RgFoOjulkjjNHHFc3WiHGB.jpg\",\n                \"https://image.tmdb.org/t/p/original/7HqxI1IXMloT9VTSuDC8ikaj810.jpg\",\n                \"https://image.tmdb.org/t/p/original/vpK2rp3J5LiC01HoNM0j9DEHQ1T.jpg\",\n                \"https://image.tmdb.org/t/p/original/cNHXdmr4amP6EPCMa0dqD8rwzDV.jpg\",\n                \"https://image.tmdb.org/t/p/original/txQLFd6rfQrskQhFENkS1jElptt.jpg\",\n                \"https://image.tmdb.org/t/p/original/dC4tj1ONdlZ2TWv4XD2SA1KUnJN.jpg\"\n            ],\n            \"reviewIds\": []\n        },\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt11116912\",\n            \"title\": \"Troll\",\n            \"releaseDate\": \"2022-12-01\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=AiohkY_XQYQ\",\n            \"genres\": [\n                \"Fantasy\",\n                \"Action\",\n                \"Adventure\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/9z4jRr43JdtU66P0iy8h18OyLql.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/53BC9F2tpZnsGno2cLhzvGprDYS.jpg\",\n                \"https://image.tmdb.org/t/p/original/e9Qb2kmBnMXHCmNMI8NX1JbWhh1.jpg\",\n                \"https://image.tmdb.org/t/p/original/2WjOOOGUu6dp4r8VqR5n48DY7JG.jpg\",\n                \"https://image.tmdb.org/t/p/original/duIsyybgrC4S8kcCIVaxNOttV15.jpg\",\n                \"https://image.tmdb.org/t/p/original/3RS8runn9AfrYDzRVPWuGPmvXQf.jpg\",\n                \"https://image.tmdb.org/t/p/original/8wLRn2VvBlCu6cqYS4ypipnwosr.jpg\",\n                \"https://image.tmdb.org/t/p/original/zDqVVkmfvj47FBUE5lwE4rWnITu.jpg\",\n                \"https://image.tmdb.org/t/p/original/682Ui5DwZDdbIPzKAEOR7cJlMXa.jpg\",\n                \"https://image.tmdb.org/t/p/original/6jdlppcnGi3XuJamfs4Vl7HyxB.jpg\",\n                \"https://image.tmdb.org/t/p/original/uIq83ogs7QBEWi1aqmUrdDIH61m.jpg\"\n            ],\n            \"reviewIds\": [\n                {\n                    \"id\": {\n                        \"timestamp\": 1691650766,\n                        \"date\": \"2023-08-10T06:59:26.000+00:00\"\n                    },\n                    \"body\": \"Not so nice movie\",\n                    \"isDeleted\": false\n                }\n            ]\n        },\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt9114286\",\n            \"title\": \"Black Panther: Wakanda Forever\",\n            \"releaseDate\": \"2022-11-11\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=_Z3QKkl1WyM\",\n            \"genres\": [\n                \"Action\",\n                \"Adventure\",\n                \"Science Fiction\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/cryEN3sWlgB2wTzcUNVtDGI8bkM.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg\",\n                \"https://image.tmdb.org/t/p/original/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg\",\n                \"https://image.tmdb.org/t/p/original/cs3LpA38BS2XDPfUzdgMB537XOo.jpg\",\n                \"https://image.tmdb.org/t/p/original/6SGMzCsaU094Mt32IHGkIYtIl06.jpg\",\n                \"https://image.tmdb.org/t/p/original/bty0TwJGsxMqYRptgyzn28Cxq5y.jpg\",\n                \"https://image.tmdb.org/t/p/original/h2jp3CSdTPc22mUqps9I8vXDPaN.jpg\",\n                \"https://image.tmdb.org/t/p/original/fSfWloWi5rmqbmC7GhO0HY2TMZW.jpg\",\n                \"https://image.tmdb.org/t/p/original/vZujZnmkYB5nGUC5d5llK9DbGLk.jpg\",\n                \"https://image.tmdb.org/t/p/original/8sMmAmN2x7mBiNKEX2o0aOTozEB.jpg\",\n                \"https://image.tmdb.org/t/p/original/geI3Mk7nehX1kvyIY3K5ajaiNfI.jpg\"\n            ],\n            \"reviewIds\": []\n        }\n    ],\n    \"possiblePages\": 4,\n    \"moviesCount\": 3\n}"
 						}
 					]
 				},
@@ -855,6 +884,588 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Request a watchable",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"requesterName\": \"\",\r\n    \"requestedTitle\": \"365 days\",\r\n    \"requestedNameType\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/api/v1/request",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"request"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No arg is sent",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/api/v1/request",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"request"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Aug 2023 11:43:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Reason\": \"No argument found, Title is must!\"\n}"
+						},
+						{
+							"name": "Required Argument is empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"requesterName\": \"\",\r\n    \"requestedTitle\": \"\",\r\n    \"requestedNameType\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/api/v1/request",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"request"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Aug 2023 11:45:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"requestedTitle\": \"Title is mandatory\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"requesterName\": \"\",\r\n    \"requestedTitle\": \"365 days\",\r\n    \"requestedNameType\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/api/v1/request",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"request"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Aug 2023 11:45:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"requestId\": {\n        \"timestamp\": 1692791149,\n        \"date\": \"2023-08-23T11:45:49.000+00:00\"\n    },\n    \"requesterName\": \"\",\n    \"requestedTitle\": \"365 days\",\n    \"requestedNameType\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add contact form",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pandey\",\r\n    \"message\": \"I want APIs\",\r\n    \"email\": \"pandey@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/contact/addNewForm",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contact",
+								"addNewForm"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No body send - Fail",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/contact/addNewForm",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contact",
+										"addNewForm"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Aug 2023 08:37:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Reason\": \"No body found, add data in body.\"\n}"
+						},
+						{
+							"name": "Incorrect data - Fail",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/contact/addNewForm",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contact",
+										"addNewForm"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Aug 2023 08:39:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"Need data to save\",\n    \"message\": \"Message is required\",\n    \"email\": \"E-mail is required\"\n}"
+						},
+						{
+							"name": "Saved - Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Pandey\",\r\n    \"message\": \"I want APIs\",\r\n    \"email\": \"pandey@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/contact/addNewForm",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contact",
+										"addNewForm"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Aug 2023 08:42:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": {\n        \"timestamp\": 1692866564,\n        \"date\": \"2023-08-24T08:42:44.000+00:00\"\n    },\n    \"name\": \"Pandey\",\n    \"email\": \"pandey@gmail.com\",\n    \"message\": \"I want APIs\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/movies/searchPagedMoviesContainingName?nameContaining=pu",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"searchPagedMoviesContainingName"
+							],
+							"query": [
+								{
+									"key": "nameContaining",
+									"value": "pu"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success - Not Recommended-No Parameter Passed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/movies/searchPagedMoviesContainingName",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"searchPagedMoviesContainingName"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Aug 2023 16:55:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "//Does not have all the 3 parameters"
+						},
+						{
+							"name": "Success - Not Reccomanded",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/movies/searchPagedMoviesContainingName?nameContaining=pu",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"searchPagedMoviesContainingName"
+									],
+									"query": [
+										{
+											"key": "nameContaining",
+											"value": "pu"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Aug 2023 17:14:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "//Does not have all (2) the parameters\n{\n    \"movies\": [\n        {\n            \"id\": {\n                \"timestamp\": 1689585802,\n                \"date\": \"2023-07-17T09:23:22.000+00:00\"\n            },\n            \"imdbId\": \"tt3915174\",\n            \"title\": \"Puss in Boots: The Last Wish\",\n            \"releaseDate\": \"2022-12-21\",\n            \"trailerLink\": \"https://www.youtube.com/watch?v=tHb7WlgyaUc\",\n            \"genres\": [\n                \"Animation\",\n                \"Action\",\n                \"Adventure\",\n                \"Comedy\",\n                \"Family\"\n            ],\n            \"poster\": \"https://image.tmdb.org/t/p/w500/1NqwE6LP9IEdOZ57NCT51ftHtWT.jpg\",\n            \"backdrops\": [\n                \"https://image.tmdb.org/t/p/original/r9PkFnRUIthgBp2JZZzD380MWZy.jpg\",\n                \"https://image.tmdb.org/t/p/original/faXT8V80JRhnArTAeYXz0Eutpv9.jpg\",\n                \"https://image.tmdb.org/t/p/original/pdrlEaknhta2wvE2dcD8XDEbAI4.jpg\",\n                \"https://image.tmdb.org/t/p/original/tGwO4xcBjhXC0p5qlkw37TrH6S6.jpg\",\n                \"https://image.tmdb.org/t/p/original/cP8YNG3XUeBmO8Jk7Skzq3vwHy1.jpg\",\n                \"https://image.tmdb.org/t/p/original/qLE8yuieTDN93WNJRmFSAEJChOg.jpg\",\n                \"https://image.tmdb.org/t/p/original/vNuHqmOJRQXY0PBd887DklSDlBP.jpg\",\n                \"https://image.tmdb.org/t/p/original/uUCc62M0I3lpZy0SiydbBmUIpNi.jpg\",\n                \"https://image.tmdb.org/t/p/original/2wPJIFrBhzzAP8oHDOlShMkERH6.jpg\",\n                \"https://image.tmdb.org/t/p/original/fnfirCEDIkxZnQEtEMMSgllm0KZ.jpg\"\n            ],\n            \"reviewIds\": [\n                {\n                    \"id\": {\n                        \"timestamp\": 1691310322,\n                        \"date\": \"2023-08-06T08:25:22.000+00:00\"\n                    },\n                    \"body\": \"one.\",\n                    \"isDeleted\": false\n                },\n                {\n                    \"id\": {\n                        \"timestamp\": 1691310395,\n                        \"date\": \"2023-08-06T08:26:35.000+00:00\"\n                    },\n                    \"body\": \"two.\",\n                    \"isDeleted\": false\n                },\n                {\n                    \"id\": {\n                        \"timestamp\": 1691310477,\n                        \"date\": \"2023-08-06T08:27:57.000+00:00\"\n                    },\n                    \"body\": \"three\",\n                    \"isDeleted\": false\n                },\n                {\n                    \"id\": {\n                        \"timestamp\": 1691310505,\n                        \"date\": \"2023-08-06T08:28:25.000+00:00\"\n                    },\n                    \"body\": \"frour\",\n                    \"isDeleted\": false\n                },\n                {\n                    \"id\": {\n                        \"timestamp\": 1691310786,\n                        \"date\": \"2023-08-06T08:33:06.000+00:00\"\n                    },\n                    \"body\": \"nice cat\",\n                    \"isDeleted\": false\n                },\n                {\n                    \"id\": {\n                        \"timestamp\": 1691310880,\n                        \"date\": \"2023-08-06T08:34:40.000+00:00\"\n                    },\n                    \"body\": \"good moview\",\n                    \"isDeleted\": false\n                },\n                {\n                    \"id\": {\n                        \"timestamp\": 1691313401,\n                        \"date\": \"2023-08-06T09:16:41.000+00:00\"\n                    },\n                    \"body\": \"checking swal\\n\",\n                    \"isDeleted\": false\n                },\n                {\n                    \"id\": {\n                        \"timestamp\": 1691313599,\n                        \"date\": \"2023-08-06T09:19:59.000+00:00\"\n                    },\n                    \"body\": \"done\",\n                    \"isDeleted\": false\n                },\n                {\n                    \"id\": {\n                        \"timestamp\": 1691313673,\n                        \"date\": \"2023-08-06T09:21:13.000+00:00\"\n                    },\n                    \"body\": \"yp all set\",\n                    \"isDeleted\": false\n                },\n                {\n                    \"id\": {\n                        \"timestamp\": 1691313705,\n                        \"date\": \"2023-08-06T09:21:45.000+00:00\"\n                    },\n                    \"body\": \"Great\",\n                    \"isDeleted\": false\n                }\n            ]\n        }\n    ],\n    \"possiblePages\": 4,\n    \"moviesCount\": 1\n}"
+						}
+					]
 				}
 			]
 		},
@@ -890,6 +1501,33 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8084",
+			"type": "string"
 		}
 	]
 }
